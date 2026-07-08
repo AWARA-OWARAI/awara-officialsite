@@ -27,9 +27,16 @@ main{max-width:820px;margin:0 auto;padding:56px 20px 80px}
 .back{display:inline-block;margin-top:36px;font-weight:700;text-decoration:none}
 footer{background:var(--ai-deep);color:#93a5c8;text-align:center;padding:26px 20px;font-size:.75rem}
 
-.coming{background:#fff;border:1px solid var(--line);border-radius:16px;padding:70px 24px;text-align:center}
-.coming h2{font-family:var(--disp);color:var(--ai-deep);font-size:2rem;letter-spacing:.1em}
-.coming p{margin-top:14px;font-size:.95rem;color:#666}
+.blog-list{list-style:none}
+.blog-list li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin-bottom:18px}
+.blog-list time{font-family:var(--disp);color:var(--ai);font-size:.85rem}
+.writer{font-size:.72rem;font-weight:700;color:#fff;background:var(--akari);border-radius:20px;padding:2px 12px;margin-left:8px;vertical-align:middle}
+.writer.k{background:var(--sudachi)}
+.writer.a{background:var(--ai)}
+.blog-list h2{font-family:var(--disp);color:var(--ai-deep);font-size:1.2rem;margin:8px 0 10px}
+.blog-list p{font-size:.93rem;margin-bottom:10px}
+.blog-list p:last-child{margin-bottom:0}
+.blog-list img{max-width:100%;border-radius:10px;margin:6px 0 10px}
 .note-link{display:block;margin-top:28px;background:var(--ai-deep);color:#fff;text-decoration:none;border-radius:14px;padding:20px 24px;text-align:center;font-weight:700}
 .note-link:hover{background:var(--ai)}
 </style>
@@ -50,11 +57,39 @@ footer{background:var(--ai-deep);color:#93a5c8;text-align:center;padding:26px 20
   <h1>ブログ</h1>
 </div>
 <main>
-<div class="coming">
-  <h2>COMING SOON</h2>
-  <p>ブログコーナーは準備中です。もうしばらくお待ちください！</p>
-</div>
-<a class="note-link" href="https://note.com/haruki_geinin" target="_blank" rel="noopener">それまでは、コミヤマ・エジソンのnoteをどうぞ →</a>
+<!-- ==================================================
+  ★ ブログ記事の追加方法 ★
+  1. 下の「ここからコピー」〜「ここまでコピー」を丸ごとコピーする
+  2. このコメントのすぐ下（一覧の一番上）に貼り付ける
+  3. 日付・タイトル・本文を書き換える
+  4. 書いた人タグ：
+     <span class="writer k">コミヤマ・エジソン</span> …緑
+     <span class="writer">ともゆき</span> …赤
+     <span class="writer a">AWARA</span> …藍（ふたりで書いたとき）
+  5. 段落を増やしたいときは <p>〜</p> を追加
+  6. 写真を入れたいときは、画像ファイル(例: photo1.jpg)をGitHubの
+     同じ場所にアップロードして、本文に <img src="photo1.jpg"> と書く
+  7. 最後に緑の「Commit changes」で保存！
+
+  ▼▼▼ ここからコピー ▼▼▼
+  <li>
+    <time datetime="2026-01-01">2026.01.01</time><span class="writer a">AWARA</span>
+    <h2>記事のタイトル</h2>
+    <p>ここに本文を書きます。</p>
+    <p>段落を分けたいときは、このようにpタグを追加します。</p>
+  </li>
+  ▲▲▲ ここまでコピー ▲▲▲
+================================================== -->
+<ul class="blog-list">
+  <!-- ▼ 新しい記事はこのすぐ下に追加（一番上＝最新） -->
+  <li>
+    <time datetime="2026-07-06">2026.07.06</time><span class="writer a">AWARA</span>
+    <h2>ブログ、はじめました！</h2>
+    <p>AWARAのブログコーナーがオープンしました。ライブの裏話や日々のあれこれを、ふたりでぼちぼち書いていきます。</p>
+    <p>まずは7月19日（日）の新ネタライブに向けて、ネタ作りをがんばります。ぜひ遊びに来てください！</p>
+  </li>
+</ul>
+<a class="note-link" href="https://note.com/haruki_geinin" target="_blank" rel="noopener">コミヤマ・エジソンのnoteはこちら →</a>
 <a class="back" href="index.html">← ホームに戻る</a>
 </main>
 <footer>© 2026 AWARA. All Rights Reserved.</footer>
