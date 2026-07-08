@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お知らせ｜AWARA 公式サイト</title>
+<meta name="description" content="徳島のお笑いコンビAWARAからのお知らせ一覧。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ai:#20386e;--ai-deep:#152547;--washi:#f6f5ef;--sudachi:#7fae2e;--akari:#e0512f;--sumi:#26282b;--line:#d8d5c9;--disp:'RocknRoll One',sans-serif;--body:'Zen Kaku Gothic New',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--body);color:var(--sumi);background:var(--washi);line-height:1.8}
+a{color:var(--ai)}
+a:focus-visible{outline:3px solid var(--akari);outline-offset:3px;border-radius:4px}
+header{position:sticky;top:0;z-index:50;background:rgba(246,245,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:12px 20px;overflow-x:auto}
+.nav .logo{font-family:var(--disp);font-size:1.3rem;color:var(--ai-deep);text-decoration:none;white-space:nowrap}
+.nav ul{display:flex;gap:4px;list-style:none;margin-left:auto}
+.nav ul a{text-decoration:none;font-size:.85rem;font-weight:500;padding:6px 10px;border-radius:20px;white-space:nowrap;color:var(--sumi)}
+.nav ul a:hover,.nav ul a[aria-current]{background:var(--ai);color:#fff}
+.page-hero{background:var(--ai-deep);color:#fff;text-align:center;padding:52px 20px}
+.page-hero h1{font-family:var(--disp);font-size:2rem;letter-spacing:.08em}
+.page-hero .en{font-size:.75rem;letter-spacing:.35em;color:var(--sudachi);font-weight:700}
+main{max-width:820px;margin:0 auto;padding:56px 20px 80px}
+.back{display:inline-block;margin-top:36px;font-weight:700;text-decoration:none}
+footer{background:var(--ai-deep);color:#93a5c8;text-align:center;padding:26px 20px;font-size:.75rem}
+
+.news-list{list-style:none}
+.news-list li{margin-bottom:14px}
+.news-list .card{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 22px;text-decoration:none;color:var(--sumi)}
+.news-list a.card:hover{border-color:var(--ai);box-shadow:0 4px 12px rgba(32,56,110,.12)}
+.news-list time{font-family:var(--disp);color:var(--ai);display:block;font-size:.9rem}
+.news-list .t{font-weight:700;margin-top:2px}
+.news-list p{font-size:.9rem;margin-top:6px}
+.more{color:var(--akari);font-weight:700;font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav" aria-label="メインナビゲーション">
+    <a class="logo" href="index.html">AWARA</a>
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="news.html" aria-current="page">お知らせ</a></li>
+      <li><a href="blog.html">ブログ</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="page-hero">
+  <p class="en">NEWS</p>
+  <h1>お知らせ</h1>
+</div>
+<main>
+<ul class="news-list">
+  <!-- ▼ 新しいお知らせは一番上に追加してください -->
+  <li><a class="card" href="event-shinneta.html">
+    <time datetime="2026-07-06">2026.07.06</time>
+    <div class="t">7/19（日）「AWARA＆AWARara 新ネタライブ」を開催します</div>
+    <p>八万コミュニティセンターにて13:30から。入場無料です、ぜひお越しください！ <span class="more">詳細を見る →</span></p>
+  </a></li>
+    <li><a class="card" href="event-minihapika.html">
+    <time datetime="2026-07-05">2026.07.05</time>
+    <div class="t">7/5（日）「浴衣でミニはぴかフェス in ゆめタウン徳島」に出演します</div>
+    <p>13:30〜13:45の出演です。観覧無料なので、ぜひ浴衣で遊びに来てください！ <span class="more">詳細を見る →</span></p>
+  </a></li>
+  <li><div class="card">
+    <time datetime="2026-07-05">2026.07.05</time>
+    <div class="t">公式ホームページをリニューアルしました</div>
+    <p>デザインを一新し、ふたりの歩みや動画コーナーを追加しました。今後ともAWARAをよろしくお願いします！</p>
+  </div></li>
+</ul>
+<a class="back" href="live.html" style="display:block;margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 22px;text-align:center">SCHEDULE（出演予定）はこちら →</a>
+<a class="back" href="index.html">← ホームに戻る</a>
+</main>
+<footer>© 2026 AWARA. All Rights Reserved.</footer>
+</body>
+</html>
