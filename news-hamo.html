@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>徳島ハモ全国化計画｜AWARA 公式サイト</title>
+<meta property="og:url" content="https://awara-officialsite.netlify.app/news-hamo.html">
+<meta property="og:title" content="コミヤマ・エジソン出演「徳島ハモ全国化計画」最新動画公開！">
+<meta property="og:description" content="徳島ハモ×お米ぱんの絶品コラボ！お笑い×地域応援チャンネル「徳島ハモ全国化計画」の最新動画はこちら。">
+<meta property="og:image" content="https://img.youtube.com/vi/gk01wDjoFks/maxresdefault.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
 <meta name="description" content="コミヤマ・エジソン出演「徳島ハモ全国化計画」の最新動画のご紹介。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,6 +54,15 @@ footer{background:var(--ai-deep);color:#93a5c8;text-align:center;padding:26px 20
 .takara-links{display:flex;gap:10px;flex-wrap:wrap}
 .takara-links a{font-size:.85rem;font-weight:700;text-decoration:none;border:1.5px solid var(--ai);color:var(--ai);padding:8px 18px;border-radius:24px}
 .takara-links a:hover{background:var(--ai);color:#fff}
+.share-box{margin-top:40px;text-align:center}
+.share-box .s-title{font-family:var(--disp);color:var(--ai-deep);font-size:1rem;margin-bottom:14px}
+.share-btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.share-btns a,.share-btns button{display:inline-block;font-family:var(--body);font-size:.88rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;padding:10px 20px;border-radius:26px;color:#fff}
+.sb-x{background:#000}
+.sb-line{background:#06C755}
+.sb-share{background:var(--ai)}
+.sb-copy{background:#888}
+.share-btns a:hover,.share-btns button:hover{opacity:.85}
 </style>
 </head>
 <body>
@@ -96,6 +112,30 @@ footer{background:var(--ai-deep);color:#93a5c8;text-align:center;padding:26px 20
   </div>
 </div>
 
+<div class="share-box">
+  <p class="s-title">＼ シェアで応援お願いします！ ／</p>
+  <div class="share-btns">
+    <a class="sb-x" href="https://twitter.com/intent/tweet?text=%E3%82%B3%E3%83%9F%E3%83%A4%E3%83%9E%E3%83%BB%E3%82%A8%E3%82%B8%E3%82%BD%E3%83%B3%E5%87%BA%E6%BC%94%E3%80%8C%E5%BE%B3%E5%B3%B6%E3%83%8F%E3%83%A2%E5%85%A8%E5%9B%BD%E5%8C%96%E8%A8%88%E7%94%BB%E3%80%8D%E6%9C%80%E6%96%B0%E5%8B%95%E7%94%BB%E5%85%AC%E9%96%8B%F0%9F%90%9F%20%E5%BE%B3%E5%B3%B6%E3%83%8F%E3%83%A2%C3%97%E3%81%8A%E7%B1%B3%E3%81%B1%E3%82%93%E3%81%AE%E7%B5%B6%E5%93%81%E3%82%B3%E3%83%A9%E3%83%9C%EF%BC%81&url=https%3A%2F%2Fawara-officialsite.netlify.app%2Fnews-hamo.html" target="_blank" rel="noopener">Xでポスト</a>
+    <a class="sb-line" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fawara-officialsite.netlify.app%2Fnews-hamo.html" target="_blank" rel="noopener">LINEで送る</a>
+    <button class="sb-share" data-url="https://awara-officialsite.netlify.app/news-hamo.html" data-text="コミヤマ・エジソン出演「徳島ハモ全国化計画」最新動画公開🐟 徳島ハモ×お米ぱんの絶品コラボ！" onclick="doShare(this)">シェア</button>
+    <button class="sb-copy" data-url="https://awara-officialsite.netlify.app/news-hamo.html" onclick="copyLink(this)">リンクをコピー</button>
+  </div>
+</div>
+<script>
+function doShare(b){
+  if(navigator.share){
+    navigator.share({title:document.title,text:b.dataset.text,url:b.dataset.url}).catch(function(){});
+  }else{
+    copyLink(b);
+  }
+}
+function copyLink(b){
+  navigator.clipboard.writeText(b.dataset.url).then(function(){
+    b.textContent='コピーしました！';
+    setTimeout(function(){b.textContent='リンクをコピー';},1500);
+  });
+}
+</script>
 <a class="back" href="index.html">← ホームに戻る</a>
 </main>
 <footer>© 2026 AWARA. All Rights Reserved.</footer>
