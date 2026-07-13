@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ブログ｜AWARA 公式サイト</title>
-<meta name="description" content="徳島のお笑いコンビAWARAのブログコーナー（準備中）。">
+<meta name="description" content="徳島のお笑いコンビAWARAのブログコーナー。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,30 +13,40 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:var(--body);color:var(--sumi);background:var(--washi);line-height:1.8}
 a{color:var(--ai)}
-a:focus-visible{outline:3px solid var(--akari);outline-offset:3px;border-radius:4px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--akari);outline-offset:3px;border-radius:4px}
 header{position:sticky;top:0;z-index:50;background:rgba(246,245,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:12px 20px;overflow-x:auto}
 .nav .logo{font-family:var(--disp);font-size:1.3rem;color:var(--ai-deep);text-decoration:none;white-space:nowrap}
 .nav ul{display:flex;gap:4px;list-style:none;margin-left:auto}
 .nav ul a{text-decoration:none;font-size:.85rem;font-weight:500;padding:6px 10px;border-radius:20px;white-space:nowrap;color:var(--sumi)}
-.nav ul a:hover,.nav ul a[aria-current]{background:var(--ai);color:#fff}
+.nav ul a:hover{background:var(--ai);color:#fff}
 .page-hero{background:var(--ai-deep);color:#fff;text-align:center;padding:52px 20px}
-.page-hero h1{font-family:var(--disp);font-size:2rem;letter-spacing:.08em}
+.page-hero h1{font-family:var(--disp);font-size:1.7rem;letter-spacing:.08em}
 .page-hero .en{font-size:.75rem;letter-spacing:.35em;color:var(--sudachi);font-weight:700}
 main{max-width:820px;margin:0 auto;padding:56px 20px 80px}
-.back{display:inline-block;margin-top:36px;font-weight:700;text-decoration:none}
-footer{background:var(--ai-deep);color:#93a5c8;text-align:center;padding:26px 20px;font-size:.75rem}
-
-.blog-list{list-style:none}
-.blog-list li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin-bottom:18px}
-.blog-list time{font-family:var(--disp);color:var(--ai);font-size:.85rem}
 .writer{font-size:.72rem;font-weight:700;color:#fff;background:var(--akari);border-radius:20px;padding:2px 12px;margin-left:8px;vertical-align:middle}
 .writer.k{background:var(--sudachi)}
 .writer.a{background:var(--ai)}
-.blog-list h2{font-family:var(--disp);color:var(--ai-deep);font-size:1.2rem;margin:8px 0 10px}
-.blog-list p{font-size:.93rem;margin-bottom:10px}
-.blog-list p:last-child{margin-bottom:0}
-.blog-list img{max-width:100%;border-radius:10px;margin:6px 0 10px}
+.back{display:inline-block;margin-top:36px;font-weight:700;text-decoration:none}
+footer{background:var(--ai-deep);color:#93a5c8;text-align:center;padding:26px 20px;font-size:.75rem}
+.share-box{margin-top:40px;text-align:center}
+.share-box .s-title{font-family:var(--disp);color:var(--ai-deep);font-size:1rem;margin-bottom:14px}
+.share-btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.share-btns a,.share-btns button{display:inline-block;font-family:var(--body);font-size:.88rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;padding:10px 20px;border-radius:26px;color:#fff}
+.sb-x{background:#000}
+.sb-line{background:#06C755}
+.sb-share{background:var(--ai)}
+.sb-copy{background:#888}
+.share-btns a:hover,.share-btns button:hover{opacity:.85}
+
+.blog-list{list-style:none}
+.blog-list li{margin-bottom:16px}
+.blog-list a.card{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 26px;text-decoration:none;color:var(--sumi)}
+.blog-list a.card:hover{border-color:var(--ai);box-shadow:0 4px 12px rgba(32,56,110,.12)}
+.blog-list time{font-family:var(--disp);color:var(--ai);font-size:.85rem}
+.blog-list h2{font-family:var(--disp);color:var(--ai-deep);font-size:1.15rem;margin:6px 0 6px}
+.blog-list p{font-size:.9rem;color:#555}
+.blog-list .more{color:var(--akari);font-weight:700;font-size:.85rem}
 .note-link{display:block;margin-top:28px;background:var(--ai-deep);color:#fff;text-decoration:none;border-radius:14px;padding:20px 24px;text-align:center;font-weight:700}
 .note-link:hover{background:var(--ai)}
 </style>
@@ -48,7 +58,7 @@ footer{background:var(--ai-deep);color:#93a5c8;text-align:center;padding:26px 20
     <ul>
       <li><a href="index.html">ホーム</a></li>
       <li><a href="news.html">お知らせ</a></li>
-      <li><a href="blog.html" aria-current="page">ブログ</a></li>
+      <li><a href="blog.html">ブログ</a></li>
     </ul>
   </nav>
 </header>
@@ -58,36 +68,35 @@ footer{background:var(--ai-deep);color:#93a5c8;text-align:center;padding:26px 20
 </div>
 <main>
 <!-- ==================================================
-  ★ ブログ記事の追加方法 ★
-  1. 下の「ここからコピー」〜「ここまでコピー」を丸ごとコピーする
-  2. このコメントのすぐ下（一覧の一番上）に貼り付ける
-  3. 日付・タイトル・本文を書き換える
-  4. 書いた人タグ：
-     <span class="writer k">コミヤマ・エジソン</span> …緑
-     <span class="writer">ともゆき</span> …赤
-     <span class="writer a">AWARA</span> …藍（ふたりで書いたとき）
-  5. 段落を増やしたいときは <p>〜</p> を追加
-  6. 写真を入れたいときは、画像ファイル(例: photo1.jpg)をGitHubの
-     同じ場所にアップロードして、本文に <img src="photo1.jpg"> と書く
-  7. 最後に緑の「Commit changes」で保存！
+  ★ ブログ記事の追加方法（記事ごとに別ファイル方式） ★
+  1. 既存の記事ファイル（post-hajimemashite.html など）をコピーして
+     新しい名前（例: post-natsu-live.html）で保存
+  2. 中の日付・タイトル・本文・Disqusのidentifierとurlを書き換える
+     ※identifierはファイル名と同じにするのがおすすめ
+  3. このblog.htmlの一覧に、下のひな形をコピーして追加する
 
   ▼▼▼ ここからコピー ▼▼▼
-  <li>
+  <li><a class="card" href="post-ファイル名.html">
     <time datetime="2026-01-01">2026.01.01</time><span class="writer a">AWARA</span>
     <h2>記事のタイトル</h2>
-    <p>ここに本文を書きます。</p>
-    <p>段落を分けたいときは、このようにpタグを追加します。</p>
-  </li>
+    <p>記事の書き出しを1〜2文だけ… <span class="more">続きを読む →</span></p>
+  </a></li>
   ▲▲▲ ここまでコピー ▲▲▲
+  書いた人タグ： class="writer k"=コミヤマ（緑）/ class="writer"=ともゆき（赤）/ class="writer a"=AWARA（藍）
+  ※面倒なときはClaudeに本文を送れば記事ファイルごと作ります！
 ================================================== -->
 <ul class="blog-list">
   <!-- ▼ 新しい記事はこのすぐ下に追加（一番上＝最新） -->
-  <li>
+  <li><a class="card" href="post-hajimemashite.html">
+    <time datetime="2026-07-13">2026.07.13</time><span class="writer">ともゆき</span>
+    <h2>はじめまして</h2>
+    <p>AWARAのボケ担当・ともゆきです！今、この記事を読んでくださっている皆様は、僕のことを何で知りましたか？… <span class="more">続きを読む →</span></p>
+  </a></li>
+  <li><a class="card" href="post-blog-start.html">
     <time datetime="2026-07-06">2026.07.06</time><span class="writer a">AWARA</span>
     <h2>ブログ、はじめました！</h2>
-    <p>AWARAのブログコーナーがオープンしました。ライブの裏話や日々のあれこれを、ふたりでぼちぼち書いていきます。</p>
-    <p>まずは7月19日（日）の新ネタライブに向けて、ネタ作りをがんばります。ぜひ遊びに来てください！</p>
-  </li>
+    <p>AWARAのブログコーナーがオープンしました。ライブの裏話や日々のあれこれを、ふたりでぼちぼち書いていきます。 <span class="more">続きを読む →</span></p>
+  </a></li>
 </ul>
 <a class="note-link" href="https://note.com/haruki_geinin" target="_blank" rel="noopener">コミヤマ・エジソンのnoteはこちら →</a>
 <a class="back" href="index.html">← ホームに戻る</a>
